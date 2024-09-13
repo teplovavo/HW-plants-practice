@@ -23,7 +23,7 @@ const growthRate = 2;
 const PI = 3.1415;
 let gardenAreaSqM = PI * radius * radius;
 
-/* Prune at > 80% of the garden area */./
+/* Prune at > 80% of the garden area */
 const pruneThreshhold = gardenAreaSqM * 0.80;
 
 /* Monitored is between 50% and 80% */
