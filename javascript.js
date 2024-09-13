@@ -23,7 +23,7 @@ const growthRate = 2;
 const PI = 3.1415;
 let gardenAreaSqM = PI * radius * radius;
 
-/* Prune at > 80% of the garden area */
+/* Prune at > 80% of the garden area */./
 const pruneThreshhold = gardenAreaSqM * 0.80;
 
 /* Monitored is between 50% and 80% */
@@ -272,8 +272,26 @@ console.log(`space remaining after week 10 = ${spaceRemainingAreaSqM}`);
 
 /* Calculate radius: r = √(A / π) */
 let newRadiusv1 = Math.sqrt(currentUsedAreaSqM / PI); 
-console.log ()
 console.log(`square root v1 = ${newRadiusv1}`);
 
-let newRadiusv2 = (currentUsedAreaSqM / PI) ^ (0.5); 
+let newRadiusv2 = (currentUsedAreaSqM / PI) ** 0.5; 
 console.log(`square root v2 = ${newRadiusv2}`);
+
+
+// PART THREE ==
+
+let scientistradius = 5;  // new scientist radius
+const minimumSqM = 0.8; // min. space
+let NumberStart = 100; // new # of plants at start
+const newGrowthRate = 2; //doubles per week
+
+try {
+    if (currentUsedAreaSqM > gardenAreaSqM) {
+        throw Error(`the space required is more than the available space`)
+    }
+    console.log("The space is enough for the plants");
+}
+catch (Error) {
+    console.log(Error);
+}
+
